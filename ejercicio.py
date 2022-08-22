@@ -7,3 +7,8 @@ print(x-y)
 #Reynaldo
 
 #Ustedes siguen abajo
+#Mauricio 
+X= 45
+U= 122
+Z= 87
+print(u*z/x)
