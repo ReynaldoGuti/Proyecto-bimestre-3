@@ -1,6 +1,7 @@
 print("hola mundo")
 
-list1=["h","o","l","a"," ","m","u","n","d","o"]
+list1=("hola mundo")
+list1= list1.split()
 
 for i in list1:
  print(i)
