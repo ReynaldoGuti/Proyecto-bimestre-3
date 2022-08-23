@@ -11,4 +11,4 @@ print(x-y)
 X= 45
 U= 122
 Z= 87
-print(U*Z/x)
+print(U*Z/X)
