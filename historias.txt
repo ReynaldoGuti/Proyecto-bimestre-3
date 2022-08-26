@@ -6,6 +6,6 @@
 6. Como usuario quiero que la red social me deje ver y perfiles de otros usuarios para poder conocerlos un poco mas.
 7. Como usuario quiero que la red social me guíe hasta las reuniones sincronicas para asistir a los grupos de autoayuda.
 8. Como usuario quiero que la pagina posea herramientas de emergencia psicologica para poder sobrellevar mi depresion en un momento de ansiedad. 
-9.  Como administrador quiero poder crear grupos de personas para que puedan reunirse y hablar acerca de su condicion en sociedad.
+9. Como usuario quiero poder crear grupos de ayuda para poder conectar de manera mas social con otras personas.
 10. Como usuario quiero poder ingresar a la pagina desde mi celular para tener un acceso mas rapido a la ayuda.
 11. Como usuario quiero poder mandar regalos fisicos y/o virtuales a otros usuarios para poder establecer mejores lazos. 
