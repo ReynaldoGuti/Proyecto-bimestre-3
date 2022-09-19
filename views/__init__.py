@@ -1,0 +1,5 @@
+from .userCreateView import UserCreateView
+from .userDetailView import UserDetailView
+from .supervisorCreateView import SupervisorCreateView
+from .supervisorDetailView import SupervisorDetailView
+from .adminCreateView import AdminCreateView
