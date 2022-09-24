@@ -4,8 +4,8 @@
   <h1>Banco UN</h1>
   <nav>
   <button v-if="is_auth" > Inicio </button>
-  <button v-if="is_auth" > Cuenta </button>
-  <button v-if="is_auth" > Cerrar Sesión </button>
+  <button v-if="is_auth" v-on:click="loadHome"> Inicio </button>
+  <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
   <button v-if="!is_auth" v-on:click="loadLogIn" > Iniciar Sesión </button>
   <button v-if="!is_auth" v-on:click="loadSignUp" > Registrarse </button>
   </nav>
@@ -15,6 +15,7 @@
   <router-view
   v-on:completedLogIn="completedLogIn"
   v-on:completedSignUp="completedSignUp"
+  v-on:logOut="logOut"
   >
   </router-view>
   </div>
@@ -41,8 +42,12 @@ export default{
 
   methods:{
    verifyAuth: function(){
+    this.is_auth = localStorage.getItem("isAuth") || false;
+
     if(this.is_auth == false)
-      this.$router.push({name:"logIn"})
+      this.$router.push({name:"logIn"});
+    else
+      this.$router.push({name: "home"});
     },
     loadLogIn: function(){
       this.$router.push({name:"logIn"})
@@ -51,8 +56,28 @@ export default{
       this.$router.push({name:"singUp"})
     },
 
-    completedLogIn: function(data){},
-    completedSignUp: function(data){},
+    logOut: function () {
+      localStorage.clear();
+      alert("Sesión Cerrada");
+      this.verifyAuth();
+    },
+
+    loadHome: function() {
+    this.$router.push({ name: "home" });
+    },
+
+    completedLogIn: function(data){
+      localStorage.setItem("isAuth", true);
+      localStorage.setItem("username", data.username);
+      localStorage.setItem("token_access", data.token_access);
+      localStorage.setItem("token_refresh", data.token_refresh);
+      alert("Autenticación Exitosa")
+      this.verifyAuth();
+    },
+    completedSignUp: function(data){
+      alert("Registro Exitoso");
+      this.completedLogIn(data);
+    },
   },
 
   created: function(){
