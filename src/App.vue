@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
   <div class="header">
-  <h1>Banco UN</h1>
+  <h1>Acompañados 2022</h1>
   <nav>
   <button v-if="is_auth" > Inicio </button>
   <button v-if="is_auth" v-on:click="loadHome"> Inicio </button>
@@ -21,7 +21,7 @@
   </div>
   
   <div class="footer">
-  <h2>Misión TIC 2022</h2>
+  <h2>Acompañados</h2>
   </div>
   </div>
   </template>
@@ -49,6 +49,8 @@ export default{
     else
       this.$router.push({name: "home"});
     },
+
+    
     loadLogIn: function(){
       this.$router.push({name:"logIn"})
     },
