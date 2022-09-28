@@ -4,7 +4,7 @@ import App from './App.vue'
 import Home from './components/Home.vue'
 import LogIn from './components/LogIn.vue'
 import SingUp from './components/SingUp.vue'
-import Accont from './components/Accont.vue'
+import Account from './components/Account.vue'
 
 const routes = [{
 path: '/',
@@ -19,7 +19,7 @@ component: App
 {
     path:'/user/account',
     name: "Account",
-    component: Accont,
+    component: Account,
 },
 {
     path: '/user/singUp',

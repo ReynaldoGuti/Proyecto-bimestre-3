@@ -7,6 +7,7 @@
   <button v-if="is_auth" v-on:click="loadHome"> Inicio </button>
   <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
   <button v-if="!is_auth" v-on:click="loadLogIn" > Iniciar Sesión </button>
+  <button v-if="is_auth" v-on:click="loadAccount"> Cuenta </button>
   <button v-if="!is_auth" v-on:click="loadSignUp" > Registrarse </button>
   </nav>
   </div>
@@ -50,7 +51,10 @@ export default{
       this.$router.push({name: "home"});
     },
 
-    
+    loadAccount: function(){
+      this.$router.push({name: "account"});
+    },
+
     loadLogIn: function(){
       this.$router.push({name:"logIn"})
     },

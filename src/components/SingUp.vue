@@ -11,9 +11,7 @@
     <input type="text" v-model="user.name" placeholder="Name">
     <br>
     <input type="email" v-model="user.email" placeholder="Email">
-    <br>
-    <input type="number" v-model="user.account.balance" placeholder="Initial Balance">
-    <br>
+    
     <button type="submit">Registrarse</button>
     </form>
     </div>
@@ -34,9 +32,8 @@ export default{
                 name:"",
                 email:"",
                 account:{
-                    lastChangeDate:(new Date()).toJSON().toString(),
-                    balance: 0,
-                    isActive: true
+                    lastChangeDate:(new Date()).toJSON().toString(),                    
+                    isActive: true,
                 }
             }
         }
