@@ -3,7 +3,7 @@
   <div class="header">
   <h1>Acompañados 2022</h1>
   <nav>
-  <button v-if="is_auth" > Inicio </button>
+    
   <button v-if="is_auth" v-on:click="loadHome"> Inicio </button>
   <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
   <button v-if="!is_auth" v-on:click="loadLogIn" > Iniciar Sesión </button>
