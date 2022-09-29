@@ -2,13 +2,13 @@
     <div class="signUp_user">
     <div class="container_signUp_user">
     <h2>Registrarse</h2>
-    <form v-on:submit.prevent="processSignUp" >
-    <input type="text" v-model="user.username" placeholder="Username">
+    <form v-on:submit.prevent= "processSignUp" >
+    <input type="text" v-model="user.username" placeholder="Usuario">
     <br>
     
-    <input type="password" v-model="user.password" placeholder="Password">
+    <input type="password" v-model="user.password" placeholder="Contraseña">
     <br>
-    <input type="text" v-model="user.name" placeholder="Name">
+    <input type="text" v-model="user.name" placeholder="Nombre">
     <br>
     <input type="email" v-model="user.email" placeholder="Email">
     
@@ -20,7 +20,7 @@
 
 <script>
 
-import axios from "axios";
+import axios from 'axios';
 
 export default{
     name: "SingUp",
@@ -54,11 +54,13 @@ export default{
                     token_refresh: result.data.refresh,
                 }
                 this.$emit('completedSingUp', dataSingUp)
+                alert("Registro completado")
             })
 
             .catch((error)=>{
-                console.log(error)
                 alert("Error: Fallo en el registro.")
+                console.log(error)
+                
             });
 
         }

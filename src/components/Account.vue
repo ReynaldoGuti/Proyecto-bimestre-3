@@ -56,6 +56,7 @@ data: function(){
             })
 
             .catch(()=>{
+                alert("Tiempo vencido, logueate de nuevo.")
                 this.$emit('logOut');
             });
         }
