@@ -42,7 +42,7 @@ export default{
     methods: {
         processSingUp: function(){
             axios.post(
-                "https://el-proyecto-acomp.herokuapp.com/user/",
+                "https://unal.herokuapp.com/user/",
                 this.user,
                 {headers:{}}
             )  
