@@ -32,7 +32,7 @@
 
         processLogInUser: function(){
             axios.post(
-                "https://unal.herokuapp.com/login/",
+                "https://acomp-100.herokuapp.com/login/",
                 this.user,
                 {headers:{}}
             )

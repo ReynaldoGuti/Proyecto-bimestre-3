@@ -3,7 +3,7 @@
   <div class="header">
   <h1>Acompañados 2022</h1>
   <nav>
-    
+
   <button v-if="is_auth" v-on:click="loadHome"> Inicio </button>
   <button v-if="is_auth" v-on:click="logOut"> Cerrar Sesión </button>
   <button v-if="!is_auth" v-on:click="loadLogIn" > Iniciar Sesión </button>
@@ -25,7 +25,7 @@
   <h2>Acompañados</h2>
   </div>
   </div>
-  </template>
+</template>
 
 <script>
 
@@ -48,11 +48,11 @@ export default{
     if(this.is_auth == false)
       this.$router.push({name:"logIn"});
     else
-      this.$router.push({name: "home"});
+      this.$router.push({name: "Home"});
     },
 
     loadAccount: function(){
-      this.$router.push({name: "account"});
+      this.$router.push({name: "Account"});
     },
 
     loadLogIn: function(){
@@ -69,7 +69,7 @@ export default{
     },
 
     loadHome: function() {
-    this.$router.push({ name: "home" });
+    this.$router.push({ name: "Home" });
     },
 
     completedLogIn: function(data){

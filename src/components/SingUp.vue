@@ -30,11 +30,8 @@ export default{
                 username:"",
                 password:"",
                 name:"",
-                email:"",
-                account:{
-                    lastChangeDate:(new Date()).toJSON().toString(),                    
-                    isActive: true,
-                }
+                email:""    
+
             }
         }
     },
@@ -42,7 +39,7 @@ export default{
     methods: {
         processSingUp: function(){
             axios.post(
-                "https://unal.herokuapp.com/user/",
+                "https://acomp-100.herokuapp.com/user/",
                 this.user,
                 {headers:{}}
             )  
