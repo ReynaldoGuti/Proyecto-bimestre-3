@@ -3,6 +3,7 @@
         <h1>Información de su cuenta</h1>
         <h2>Nombre: <span>{{name}}</span></h2>
         <h2>Correo electrónico: <span>{{email}}</span></h2>
+        <h3>Paciente</h3>
     </div>
 </template>
 
@@ -17,8 +18,7 @@ name: "Account",
 data: function(){
     return {
         name: "",
-        email: "",
-        balance: 0,
+        email: "",        
         loaded: false,
         }   
     },
@@ -88,11 +88,16 @@ data: function(){
 
 .information h2{
     font-size: 40px;
-    color: #283747;
+    color: #283747;   
 }
 
 .information span{
     color: crimson;
     font-weight: bold;
+}
+
+.information h3{
+    font-size: 40px;
+    color:crimson ;   
 }
 </style>

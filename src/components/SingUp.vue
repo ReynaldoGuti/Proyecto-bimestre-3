@@ -2,7 +2,7 @@
     <div class="signUp_user">
     <div class="container_signUp_user">
     <h2>Registrarse</h2>
-    <form v-on:submit.prevent= "processSignUp" >
+    <form v-on:submit.prevent= "processSignUp">
     <input type="text" v-model="user.username" placeholder="Usuario">
     <br>
     
@@ -12,7 +12,7 @@
     <br>
     <input type="email" v-model="user.email" placeholder="Email">
     
-    <button type="submit">Registrarse</button>
+    <button v-on:click="processSingUp"> Registrarse </button>
     </form>
     </div>
     </div>

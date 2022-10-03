@@ -46,7 +46,7 @@
             })
             .catch((error) => {
                 if(error.response.status == "401")
-                    alert("ERROR 401: Credenciales Incorrectas");
+                    alert("ERROR 401: Usuario o contraseña incorrectos.");
             });
         }
     }
